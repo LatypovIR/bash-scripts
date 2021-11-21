@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grep -E "^\[.+\(WW\)" /var/log/anaconda/X.log | sed "s/(WW)/Warning:/g" > "full.log"
+grep -E "^\[.+\(II\)" /var/log/anaconda/X.log | sed "s/(II)/Information:/g" >> "full.log"
