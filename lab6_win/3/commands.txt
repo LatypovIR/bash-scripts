@@ -1,0 +1,9 @@
+PS C:\LAB6\3> Get-Service > a.txt
+PS C:\LAB6\3> REG add "HKLM\SYSTEM\CurrentControlSet\services\Dnscache" /v Start /t REG_DWORD /d 4 /f
+Операция успешно завершена.
+PS C:\LAB6\3> Restart-Computer
+PS C:\LAB6\3> Get-Service > b.txt
+PS C:\LAB6\3> powershell .\file-diff.ps1
+PS C:\LAB6\3> REG add "HKLM\SYSTEM\CurrentControlSet\services\Dnscache" /v Start /t REG_DWORD /d 2 /f
+Операция успешно завершена.
+PS C:\LAB6\3> Restart-Computer

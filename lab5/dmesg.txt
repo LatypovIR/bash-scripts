@@ -1,0 +1,56 @@
+[ 1451.839325] Out of memory: Killed process 6352 (bash) total-vm:7384664kB, anon-rss:6353480kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:14476kB oom_score_adj:0
+[ 1452.142515] oom_reaper: reaped process 6352 (bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+
+
+94000000
+
+
+??????????????????????????
+
+48000000
+94000000
+
+[ 1947.738846] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/user@1000.service,task=mem2.bash,pid=7853,uid=1000
+[ 1947.738863] Out of memory: Killed process 7853 (mem2.bash) total-vm:3778160kB, anon-rss:3287420kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:7424kB oom_score_adj:0
+[ 1947.947110] oom_reaper: reaped process 7853 (mem2.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+
+[ 2012.753905] [   7852]  1000  7852  1821185  1583491 14626816   233216             0 mem.bash
+[ 2012.753919] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/user@1000.service,task=mem.bash,pid=7852,uid=1000
+[ 2012.753936] Out of memory: Killed process 7852 (mem.bash) total-vm:7284740kB, anon-rss:6333960kB, file-rss:4kB, shmem-rss:0kB, UID:1000 pgtables:14284kB oom_score_adj:0
+[ 2013.166838] oom_reaper: reaped process 7852 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+
+?????????????????????????
+
+solt@ildar-pc:~/Desktop/lab5$ sudo dmesg --clear
+solt@ildar-pc:~/Desktop/lab5$ bash newmem_start.bash 9400000 10
+solt@ildar-pc:~/Desktop/lab5$ dmesg | grep "Killed" | grep "newmem.bash"
+solt@ildar-pc:~/Desktop/lab5$ bash newmem_start.bash 9400000 30
+solt@ildar-pc:~/Desktop/lab5$ dmesg | grep "Killed" | grep "newmem.bash"
+[ 5877.824176] Out of memory: Killed process 12434 (newmem.bash) total-vm:587588kB, anon-rss:418008kB, file-rss:4kB, shmem-rss:0kB, UID:1000 pgtables:1180kB oom_score_adj:0
+[ 5880.352802] Out of memory: Killed process 12436 (newmem.bash) total-vm:577952kB, anon-rss:428412kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1160kB oom_score_adj:0
+[ 5882.778665] Out of memory: Killed process 12438 (newmem.bash) total-vm:589700kB, anon-rss:459400kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1184kB oom_score_adj:0
+[ 5885.302824] Out of memory: Killed process 12440 (newmem.bash) total-vm:558812kB, anon-rss:446488kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1120kB oom_score_adj:0
+[ 5887.889444] Out of memory: Killed process 12445 (newmem.bash) total-vm:549176kB, anon-rss:474080kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1100kB oom_score_adj:0
+[ 5890.296477] Out of memory: Killed process 12442 (newmem.bash) total-vm:554324kB, anon-rss:462912kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1112kB oom_score_adj:0
+[ 5892.552343] Out of memory: Killed process 12447 (newmem.bash) total-vm:546404kB, anon-rss:457780kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1096kB oom_score_adj:0
+[ 5895.041021] Out of memory: Killed process 12449 (newmem.bash) total-vm:564224kB, anon-rss:471252kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1128kB oom_score_adj:0
+[ 5897.846557] Out of memory: Killed process 12451 (newmem.bash) total-vm:543500kB, anon-rss:445908kB, file-rss:4kB, shmem-rss:0kB, UID:1000 pgtables:1088kB oom_score_adj:0
+[ 5900.234928] Out of memory: Killed process 12453 (newmem.bash) total-vm:573200kB, anon-rss:492392kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1152kB oom_score_adj:0
+[ 5903.067261] Out of memory: Killed process 12459 (newmem.bash) total-vm:561320kB, anon-rss:485256kB, file-rss:4kB, shmem-rss:0kB, UID:1000 pgtables:1128kB oom_score_adj:0
+[ 5905.417637] Out of memory: Killed process 12455 (newmem.bash) total-vm:598412kB, anon-rss:509376kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1204kB oom_score_adj:0
+[ 5908.151848] Out of memory: Killed process 12457 (newmem.bash) total-vm:625340kB, anon-rss:527384kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1244kB oom_score_adj:0
+[ 5910.971044] Out of memory: Killed process 12463 (newmem.bash) total-vm:661244kB, anon-rss:561496kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1324kB oom_score_adj:0
+[ 5913.887913] Out of memory: Killed process 12465 (newmem.bash) total-vm:713252kB, anon-rss:610728kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:1428kB oom_score_adj:0
+
+
+????????????????????????
+
+solt@ildar-pc:~/Desktop/lab5$ sudo dmesg | grep "newmem.bash" | wc -l
+0
+solt@ildar-pc:~/Desktop/lab5$ bash newmem_start.bash 6585000 30
+solt@ildar-pc:~/Desktop/lab5$ sudo dmesg | grep "newmem.bash" | wc -l
+0
+solt@ildar-pc:~/Desktop/lab5$ bash newmem_start.bash 6586000 30
+solt@ildar-pc:~/Desktop/lab5$ sudo dmesg | grep "newmem.bash" | wc -l
+25
+

@@ -1,0 +1,8 @@
+PS C:\LAB6\2> hostname
+PS C:\LAB6\2> schtasks /create /sc MINUTE /tn taskname /tr "powershell C:\LAB6\2\copy.ps1"
+УСПЕХ. Запланированная задача "taskname" была успешно создана.
+PS C:\LAB6\2> schtasks /run /tn taskname
+УСПЕХ. Попытка выполнить запланированную задачу "taskname".
+PS C:\LAB6\2> schtasks /delete /tn taskname
+ВНИМАНИЕ! Вы действительно хотите удалить задачу "taskname" [Y(да)/N(нет)]? y
+УСПЕХ. Запланированная задача "taskname" была успешно удалена.

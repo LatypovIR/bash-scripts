@@ -1,0 +1,2 @@
+PS C:\LAB6\4> driverquery > DRIVERS.txt
+PS C:\LAB6\4> cat .\DRIVERS.txt | sort -D > rsorted.txt

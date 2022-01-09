@@ -1,0 +1,17 @@
+#!/bin/bash
+
+FILE="report.log"
+ARR=()
+I=0
+
+echo > top.log
+
+while true
+do	
+	ARR+=(1 2 3 4 5 6 7 8 9 0)
+	let I=I+1
+	if [[ $(($I % 100000)) -eq 0 ]]
+	then
+		echo ${#ARR[@]} >> $FILE
+	fi
+done

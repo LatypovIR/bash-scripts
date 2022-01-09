@@ -1,0 +1,40 @@
+PS C:\LAB6> systeminfo > systeminfo.txt
+PS C:\LAB6> Get-PhysicalDisk > GetPhysialDisk.txt
+PS C:\LAB6> mkdir TEST
+
+
+    Каталог: C:\LAB6
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        17.12.2021      0:39                TEST
+
+
+PS C:\LAB6> copy .\systeminfo.txt -Destination .\TEST\
+PS C:\LAB6> copy .\GetPhysialDisk.txt -Destination .\TEST\
+PS C:\LAB6> cd .\TEST\
+PS C:\LAB6\TEST> cat * > all.txt
+PS C:\LAB6\TEST> ls
+
+
+    Каталог: C:\LAB6\TEST
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        17.12.2021      0:41           7974 all.txt
+-a----        17.12.2021      0:37           1708 GetPhysialDisk.txt
+-a----        17.12.2021      0:36           6268 systeminfo.txt
+
+
+PS C:\LAB6\TEST> ls | sort LastWriteTime -d | select -Skip 1 | rm
+PS C:\LAB6\TEST> ls
+
+
+    Каталог: C:\LAB6\TEST
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        17.12.2021      0:41           7974 all.txt
